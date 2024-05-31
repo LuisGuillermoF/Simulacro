@@ -2,7 +2,6 @@ package com.riwi.Simulacro_Spring_Boot.domain.entities;
 
 import java.util.List;
 
-import org.apache.commons.lang3.builder.HashCodeExclude;
 
 import com.riwi.Simulacro_Spring_Boot.util.RoleUsers;
 
