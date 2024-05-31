@@ -4,6 +4,7 @@ import org.springframework.data.domain.Page;
 
 import com.riwi.Simulacro_Spring_Boot.api.dto.request.UserRequest;
 import com.riwi.Simulacro_Spring_Boot.api.dto.response.basicResponse.UserResponse;
+import com.riwi.Simulacro_Spring_Boot.domain.entities.User;
 import com.riwi.Simulacro_Spring_Boot.infrastructure.abastract_services.IuserService;
 
 public class UserService implements IuserService{
@@ -30,6 +31,12 @@ public class UserService implements IuserService{
     public Page<UserResponse> getAll(int page, int size) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'getAll'");
+    }
+
+    private User userRequest (UserRequest request,User user){
+        user.setNameUser(request.getNameUser());
+        user.setEmailUser(request.getEmailUser());
+        user.setFullName(request.getFullName());
     }
     
 }
