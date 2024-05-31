@@ -2,7 +2,7 @@ package com.riwi.Simulacro_Spring_Boot.domain.entities;
 
 import java.util.List;
 
-
+import org.apache.commons.lang3.builder.HashCodeExclude;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -11,6 +11,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,7 +20,6 @@ import lombok.ToString;
 
 @Entity(name = "Courses")
 @Data
-
 @AllArgsConstructor
 @NoArgsConstructor
 public class Course {
@@ -30,9 +30,9 @@ public class Course {
     private String description;
 
     @ToString.Exclude
-    @OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.REFRESH)
-    @JoinColumn(name = "user_id", referencedColumnName = "id")
-    private List<User> user;
+    @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.REFRESH)
+    @JoinColumn(name = "instructor_id", referencedColumnName = "id")
+    private User user;
 
     @ToString.Exclude
     @OneToMany(mappedBy = "courses_id", fetch = FetchType.LAZY,cascade =  CascadeType.REFRESH)

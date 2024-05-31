@@ -2,6 +2,8 @@ package com.riwi.Simulacro_Spring_Boot.domain.entities;
 
 import java.util.List;
 
+import org.apache.commons.lang3.builder.HashCodeExclude;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -34,6 +36,7 @@ public class Lesson {
     private Course courses;
 
     @ToString.Exclude
+    @HashCodeExclude
     @OneToMany(mappedBy = "assigments",cascade = CascadeType.REFRESH)
     private List<Assignment> assigments;
 }
