@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class SubmissionResponse {
+public class SubmissionRSBasic {
     private Long id;
     private String content;
     private LocalDateTime date;

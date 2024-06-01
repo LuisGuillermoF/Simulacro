@@ -11,10 +11,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class UserResponse {
+public class UserRSBasic {
     private Long id;
+    private String name;
+    private String email;
+    private String password;
     private String fullName;
-    private String passwordUser;
-    private String emailUser;
     private RoleUsers role;
 }

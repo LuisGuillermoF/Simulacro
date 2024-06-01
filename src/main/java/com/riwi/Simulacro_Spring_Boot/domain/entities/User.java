@@ -15,33 +15,35 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-@Entity (name = "user")
+@Entity (name = "User")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@Builder
 
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(length = 30, nullable = false)
-    private String nameUser;
-    @Column(length = 30, nullable = false)
-    private String passwordUser;
-    @Column(length = 40, nullable = false)
-    private String emailUser;
-    @Column(length = 50, nullable = false)
+    @Column(length = 30)
+    private String name;
+    @Column(length = 30)
+    private String password;
+    @Column(length = 40)
+    private String email;
+    @Column(length = 50)
     private String fullName;
     @Enumerated(EnumType.STRING)
     private RoleUsers role;
 
 
     @ToString.Exclude
-    @OneToMany(mappedBy = "user",
+    @OneToMany(mappedBy = "instructor_id",
     cascade = CascadeType.ALL)
     private List<Course> courses;
 

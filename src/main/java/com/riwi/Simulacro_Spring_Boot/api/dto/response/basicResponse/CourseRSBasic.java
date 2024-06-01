@@ -1,6 +1,6 @@
 package com.riwi.Simulacro_Spring_Boot.api.dto.response.basicResponse;
 
-import java.time.LocalDateTime;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,7 +11,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class EnrollmentResponse {
+public class CourseRSBasic {
     private Long id;
-    private LocalDateTime date;
+    private String nameCourse;
+    private String description;
+    private UserRSBasic intructorId;
 }

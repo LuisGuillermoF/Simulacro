@@ -1,8 +1,5 @@
 package com.riwi.Simulacro_Spring_Boot.api.dto.response.basicResponse;
 
-
-import com.riwi.Simulacro_Spring_Boot.domain.entities.User;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,10 +9,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class CourseResponse {
+public class LessonRSBasic {
     private Long id;
-    private String nameCourse;
+    private String title;
     private String description;
-    private User user;
-
 }

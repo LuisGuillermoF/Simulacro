@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.riwi.Simulacro_Spring_Boot.domain.entities.User;
 
 @Repository
-public interface userRepository extends JpaRepository<User,Long>{
+public interface UserRepository extends JpaRepository<User,Long>{
     
 }

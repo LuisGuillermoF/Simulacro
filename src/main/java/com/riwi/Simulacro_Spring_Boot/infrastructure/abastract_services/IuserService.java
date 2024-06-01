@@ -1,8 +1,8 @@
 package com.riwi.Simulacro_Spring_Boot.infrastructure.abastract_services;
 
 import com.riwi.Simulacro_Spring_Boot.api.dto.request.UserRequest;
-import com.riwi.Simulacro_Spring_Boot.api.dto.response.basicResponse.UserResponse;
+import com.riwi.Simulacro_Spring_Boot.api.dto.response.basicResponse.UserRSBasic;
 
-public interface IuserService extends CrudGeneral<UserRequest,UserResponse,Long>{
-    
+public interface IUserService extends CrudGeneral<UserRequest,UserRSBasic,Long>{
+    public UserRSBasic getById(Long id);
 }

@@ -11,9 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class AssignmentResponse {
+public class EnrollmentRSBasic {
     private Long id;
-    private String title;
-    private String description;
-    private LocalDateTime data;
+    private LocalDateTime date;
 }

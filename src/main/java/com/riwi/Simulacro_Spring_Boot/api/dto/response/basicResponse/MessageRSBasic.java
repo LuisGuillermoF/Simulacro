@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class MessageResponse {
+public class MessageRSBasic {
     private Long id;
     private String content;
     private LocalDateTime date;

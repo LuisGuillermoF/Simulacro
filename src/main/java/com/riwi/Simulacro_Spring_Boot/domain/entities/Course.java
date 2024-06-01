@@ -14,12 +14,14 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Entity(name = "Courses")
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class Course {
@@ -32,7 +34,7 @@ public class Course {
     @ToString.Exclude
     @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.REFRESH)
     @JoinColumn(name = "instructor_id", referencedColumnName = "id")
-    private User user;
+    private User instructor_id;
 
     @ToString.Exclude
     @OneToMany(mappedBy = "courses_id", fetch = FetchType.LAZY,cascade =  CascadeType.REFRESH)
