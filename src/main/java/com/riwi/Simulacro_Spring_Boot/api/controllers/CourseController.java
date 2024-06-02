@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.riwi.Simulacro_Spring_Boot.api.dto.request.CourseRequest;
 import com.riwi.Simulacro_Spring_Boot.api.dto.response.basicResponse.CourseRSBasic;
-import com.riwi.Simulacro_Spring_Boot.api.dto.response.basicResponse.UserRSBasic;
 import com.riwi.Simulacro_Spring_Boot.infrastructure.abastract_services.ICourseService;
 
 import io.swagger.v3.oas.annotations.tags.Tag;

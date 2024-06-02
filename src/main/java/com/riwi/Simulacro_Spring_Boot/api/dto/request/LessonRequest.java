@@ -17,5 +17,4 @@ public class LessonRequest {
     @NotBlank(message = "La descrion de la lesion debe ser requerido")
     private String description;
     private Long courseId;
-    private Long assignment;
 }
