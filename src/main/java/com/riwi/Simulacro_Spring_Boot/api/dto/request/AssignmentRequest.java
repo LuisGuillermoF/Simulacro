@@ -14,11 +14,11 @@ import lombok.NoArgsConstructor;
 @Builder
 public class AssignmentRequest {
     private Long id;
-    @NotBlank(message = "El titulo de la asignacion es requerido")
+    //@NotBlank(message = "El titulo de la asignacion es requerido")
     private String title;
-    @NotBlank(message = "La descricion de la asignacion es requerido")
+    //@NotBlank(message = "La descricion de la asignacion es requerido")
     private String description;
-    @NotBlank(message = "La fecha de la asignacion es requerido")
+    //@NotBlank(message = "La fecha de la asignacion es requerido")
     private LocalDateTime data;
 
     private Long lessonId;

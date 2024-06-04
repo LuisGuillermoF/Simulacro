@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.riwi.Simulacro_Spring_Boot.api.dto.request.CourseRequest;
 import com.riwi.Simulacro_Spring_Boot.api.dto.response.basicResponse.CourseRSBasic;
+import com.riwi.Simulacro_Spring_Boot.api.dto.response.basicResponse.LessonRSBasic;
 import com.riwi.Simulacro_Spring_Boot.api.dto.response.basicResponse.UserRSBasic;
 import com.riwi.Simulacro_Spring_Boot.domain.entities.Course;
 import com.riwi.Simulacro_Spring_Boot.domain.entities.User;
@@ -89,5 +90,11 @@ public class CoursesService implements ICourseService{
     @Override
     public CourseRSBasic getById(Long id) {
         return this.entityToResponse(this.find(id));
+    }
+
+    @Override
+    public LessonRSBasic getByCourse(long id) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getByCourse'");
     }
 }

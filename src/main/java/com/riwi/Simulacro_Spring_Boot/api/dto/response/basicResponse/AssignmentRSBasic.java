@@ -16,4 +16,5 @@ public class AssignmentRSBasic {
     private String title;
     private String description;
     private LocalDateTime data;
+    private LessonRSBasic lesson;
 }

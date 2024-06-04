@@ -14,4 +14,6 @@ import lombok.NoArgsConstructor;
 public class EnrollmentRSBasic {
     private Long id;
     private LocalDateTime date;
+    private CourseRSBasic course;
+    private UserRSBasic user;
 }

@@ -1,6 +1,6 @@
 package com.riwi.Simulacro_Spring_Boot.infrastructure.services;
 
-import org.springframework.beans.BeanUtils;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -75,16 +75,19 @@ public class LessonService implements ILessonService{
         .title(entity.getTitle())
         .description(entity.getDescription())
         .course_id(CourseRSBasic.builder()
-        .id(entity.getCourses().getId())
-        .nameCourse(entity.getCourses().getNameCourse())
-        .description(entity.getCourses().getDescription())
-        .intructorId(UserRSBasic.builder()
-        .name(entity.getCourses().getInstructor_id().getName())
-        .email(entity.getCourses().getInstructor_id().getEmail())
-        .password(entity.getCourses().getInstructor_id().getPassword())
-        .fullName(entity.getCourses().getInstructor_id().getFullName())
-        .role(entity.getCourses().getInstructor_id().getRole())
-        .build()));
+            .id(entity.getCourses().getId())
+            .nameCourse(entity.getCourses().getNameCourse())
+            .description(entity.getCourses().getDescription())
+            .intructorId(UserRSBasic.builder()
+                .id(entity.getCourses().getInstructor_id().getId())
+                .name(entity.getCourses().getInstructor_id().getName())
+                .email(entity.getCourses().getInstructor_id().getEmail())
+                .password(entity.getCourses().getInstructor_id().getPassword())
+                .fullName(entity.getCourses().getInstructor_id().getFullName())
+                .role(entity.getCourses().getInstructor_id().getRole())
+                .build())
+            .build())
+        .build();
     }
 
     public Lesson find(Long id){
@@ -95,10 +98,4 @@ public class LessonService implements ILessonService{
     public LessonRSBasic getById(Long id) {
         return this.entityToResponse(this.find(id));
     }
-
-    
-
-    
-
-    
 }

@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Builder
 public class EnrollmentRequest {
     private Long id;
-    @NotBlank(message = "La fecha de matricula debe ser requerida")
+    //@NotBlank(message = "La fecha de matricula debe ser requerida")
     private LocalDateTime date;
     private Long userId;
     private Long courseId;
