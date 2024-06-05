@@ -42,6 +42,6 @@ public class Assignment {
     
     @ToString.Exclude
     @HashCodeExclude
-    @OneToMany(mappedBy = "submissions",cascade = CascadeType.REFRESH)
+    @OneToMany(mappedBy = "assignment",cascade = CascadeType.REFRESH)
     private List<Submission> submissions;
 }

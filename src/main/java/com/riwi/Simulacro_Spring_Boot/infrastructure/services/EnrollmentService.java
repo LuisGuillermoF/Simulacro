@@ -33,7 +33,7 @@ public class EnrollmentService implements IEnrollMentService{
 
     @Override
     public void delete(Long id) {
-        this.objEnrollmentRepository.delete(this.find(g));
+        this.objEnrollmentRepository.delete(this.find(id));
     }
 
     @Override
@@ -45,8 +45,10 @@ public class EnrollmentService implements IEnrollMentService{
 
     @Override
     public EnrollmentRSBasic update(Long id, EnrollmentRequest request) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'update'");
+        Enrollment objEnrollment = this.find(id);
+        Enrollment objEnrollmentUpdate = this.entityToRequest(request);
+        objEnrollmentUpdate.setId(objEnrollment.getId());
+        return this.entityToResponse(this.objEnrollmentRepository.save(objEnrollmentUpdate));
     }
 
     @Override
@@ -60,8 +62,7 @@ public class EnrollmentService implements IEnrollMentService{
 
     @Override
     public EnrollmentRSBasic getById(Long id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getById'");
+        return this.entityToResponse(this.find(id));
     }
     
     public Enrollment find(Long id){

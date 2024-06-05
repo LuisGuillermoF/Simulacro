@@ -12,12 +12,14 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity (name = "Submissions")
 @Data
 @AllArgsConstructor
+@Builder
 @NoArgsConstructor
 public class Submission {
     @Id
@@ -33,5 +35,5 @@ public class Submission {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "assignments_id",referencedColumnName = "id")
-    private Assignment submissions;
+    private Assignment assignment;
 }

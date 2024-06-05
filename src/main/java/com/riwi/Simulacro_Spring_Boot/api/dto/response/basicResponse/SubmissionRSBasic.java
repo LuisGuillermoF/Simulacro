@@ -16,4 +16,6 @@ public class SubmissionRSBasic {
     private String content;
     private LocalDateTime date;
     private Double grade;
+    private UserRSBasic user;
+    private AssignmentRSBasic assignment;
 }

@@ -83,7 +83,6 @@ public class AssignmentService implements IAssignmentService{
         .id(entity.getAssigments().getCourses().getInstructor_id().getId())
         .name(entity.getAssigments().getCourses().getInstructor_id().getName())
         .email(entity.getAssigments().getCourses().getInstructor_id().getEmail())
-        .password(entity.getAssigments().getCourses().getInstructor_id().getPassword())
         .fullName(entity.getAssigments().getCourses().getInstructor_id().getFullName())
         .role(entity.getAssigments().getCourses().getInstructor_id().getRole())
         .build();

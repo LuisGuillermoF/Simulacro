@@ -16,4 +16,5 @@ public class CourseRSBasic {
     private String nameCourse;
     private String description;
     private UserRSBasic intructorId;
+    private MessageRSBasic message;
 }
